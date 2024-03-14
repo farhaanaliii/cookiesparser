@@ -15,14 +15,21 @@ pip install cookiesparser
 
 # Usage
 ```python
-from cookiesparser import parse
+from cookiesparser import (parse, encode_cookies)
 
-parsed = parse("foo=bar; id=191002929; key=avjwowuejbnwoqo; bar=foo;")
-print(parsed)
+c = "foo=bar; id=191002929; key=avjwowuejbnwoqo; bar=foo;"
+parsed = parse(c)
+encoded = encode_cookies(parsed)
+
+print("Orignal: %s" % (c))
+print("Parsed: %s" % (parsed))
+print("Encoded: %s" % (encoded))
 ```
  # Output
- ```json
-{"foo": "bar", "id": "191002929", "key": "avjwowuejbnwoqo", "bar": "foo"}
+ ```
+Orignal: foo=bar; id=191002929; key=avjwowuejbnwoqo; bar=foo;
+Parsed: {'foo': 'bar', 'id': '191002929', 'key': 'avjwowuejbnwoqo', 'bar': 'foo'}
+Encoded: foo=bar; id=191002929; key=avjwowuejbnwoqo; bar=foo
 ```
 
 # Contributing
