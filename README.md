@@ -20,6 +20,10 @@ from cookiesparser import parse
 parsed = parse("foo=bar; id=191002929; key=avjwowuejbnwoqo; bar=foo;")
 print(parsed)
 ```
+ # Output
+ ```json
+{"foo": "bar", "id": "191002929", "key": "avjwowuejbnwoqo", "bar": "foo"}
+```
 
 # Contributing
 Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/farhanaliofficial/cookiesparser).
