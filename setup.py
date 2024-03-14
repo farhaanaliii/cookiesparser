@@ -16,7 +16,7 @@ setup(
 	author_email=about["__author_email__"],
 	long_description=readme,
 	long_description_content_type="text/markdown",
-	packages=find_packages(),
+	packages=["cookiesparser"],
 	keywords=[
 		"cookiesparser",
 		"cookie parser",
