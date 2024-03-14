@@ -1,4 +1,7 @@
-from .cparser import parse
+from .cparser import (
+    parse,
+    encode_cookies
+)
 from .__version__ import (
     __author__,
     __author_email__,
