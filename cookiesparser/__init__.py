@@ -1,4 +1,4 @@
-from .parser import parse
+from .cparser import parse
 from .__version__ import (
     __author__,
     __author_email__,
