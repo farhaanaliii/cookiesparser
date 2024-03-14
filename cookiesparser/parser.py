@@ -7,7 +7,7 @@ import re
 # if cookies are not valid then returns a empty dictionary
 def parse(cookies):
 	parsed = {}
-	if cookied is None: return parsed
+	if cookies is None: return parsed
 	
 	# magical regex (I don't know much about regex)
 	res = re.findall("\s*(.*?)=(.*?);\s*", cookies)
