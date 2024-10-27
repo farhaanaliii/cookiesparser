@@ -18,7 +18,7 @@ def parse(cookies):
 	# Cookies are invalid if it is None
 	parsed = {}
 	if res is None or len(res) == 0:
-		return parse
+		return parsed
 	
 	for data in res:
 		if len(data) == 2:
