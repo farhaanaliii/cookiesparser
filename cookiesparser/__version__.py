@@ -1,5 +1,5 @@
 __title__ = "cookiesparser"
-__description__ = "Mini Module for Parsing Cookies."
+__description__ = "cookiesparser is a mini module for parsing cookies."
 __url__ = "https://github.com/farhanaliofficial/cookiesparser"
 __version__ = "1.3"
 __author__ = "Farhan Ali"

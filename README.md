@@ -5,7 +5,7 @@
 [![PyPI](https://img.shields.io/pypi/v/cookiesparser)](https://pypi.org/project/cookiesparser/)
 
 # Description
-cookiesparser is a Mini Module for Parsing Cookies.
+**cookiesparser** is a mini module for parsing cookies 🍪✨. This basic but super useful tool allows you to easily extract and encode cookies from strings, making your coding journey a little sweeter!
 
 # Installation
 You can install cookiesparser using pip:
@@ -15,15 +15,15 @@ pip install cookiesparser
 
 # Usage
 ```python
-from cookiesparser import (parse, encode_cookies)
+import cookiesparser as cparser
 
 c = "foo=bar; id=191002929; key=avjwowuejbnwoqo; bar=foo;"
-parsed = parse(c)
-encoded = encode_cookies(parsed)
+parsed = cparser.parse(c)
+encoded = cparser.encode(parsed)
 
-print("Orignal: %s" % (c))
-print("Parsed: %s" % (parsed))
-print("Encoded: %s" % (encoded))
+print(f"Orignal: {c}")
+print(f"Parsed: {parsed}")
+print("Encoded: {encoded}")
 ```
  # Output
  ```

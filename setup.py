@@ -9,24 +9,32 @@ with open(os.path.join(here, "cookiesparser", "__version__.py"), "r") as f:
 
 readme = open("README.md","r").read()
 setup(
-	name=about["__title__"],
-	version=about["__version__"],
-	author=about["__author__"],
-	description=about["__description__"],
-	author_email=about["__author_email__"],
-	long_description=readme,
-	long_description_content_type="text/markdown",
-	packages=["cookiesparser"],
-	keywords=[
-		"cookiesparser",
-		"cookie parser",
-		"cookies parser",
-		"parse cookies"
-	],
-	classifiers=[
-		"Programming Language :: Python :: 3",
-		"License :: OSI Approved :: Apache Software License",
-		"Operating System :: OS Independent",
+    name=about["__title__"],
+    version=about["__version__"],
+    author=about["__author__"],
+    description=about["__description__"],
+    author_email=about["__author_email__"],
+    long_description=readme,
+    long_description_content_type="text/markdown",
+    packages=["cookiesparser"],
+    keywords=[
+        "cookies",
+        "cookie parsing",
+        "cookie management",
+        "http cookies",
+        "web development",
+        "python cookies",
+        "cookie encoder",
+        "cookie decoder",
+        "data parsing",
+        "string manipulation",
+        "mini module",
+        "farhan ali",
     ],
-	install_requires=[],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: Apache Software License",
+        "Operating System :: OS Independent",
+    ],
+    install_requires=[],
 )
