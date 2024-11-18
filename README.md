@@ -1,7 +1,7 @@
 # cookiesparser
 
-[![GitHub](https://img.shields.io/github/license/farhanaliofficial/cookiesparser)](https://github.com/farhanaliofficial/cookiesparser/blob/main/LICENSE)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/farhanaliofficial/cookiesparser)](https://github.com/farhanaliofficial/cookiesparser/releases)
+[![GitHub](https://img.shields.io/github/license/farhaanaliii/cookiesparser)](https://github.com/farhaanaliii/cookiesparser/blob/main/LICENSE)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/farhaanaliii/cookiesparser)](https://github.com/farhaanaliii/cookiesparser/releases)
 [![PyPI](https://img.shields.io/pypi/v/cookiesparser)](https://pypi.org/project/cookiesparser/)
 
 # Description
@@ -23,7 +23,7 @@ encoded = cparser.encode(parsed)
 
 print(f"Orignal: {c}")
 print(f"Parsed: {parsed}")
-print("Encoded: {encoded}")
+print(f"Encoded: {encoded}")
 ```
  # Output
  ```
@@ -33,7 +33,7 @@ Encoded: foo=bar; id=191002929; key=avjwowuejbnwoqo; bar=foo
 ```
 
 # Contributing
-Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/farhanaliofficial/cookiesparser).
+Contributions are welcome! If you encounter any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request on the [GitHub repository](https://github.com/farhaanaliii/cookiesparser).
 
 # License
-cookiesparser is released under the [Apache License](https://github.com/farhanaliofficial/cookiesparser/blob/main/LICENSE).
+cookiesparser is released under the [Apache License](https://github.com/farhaanaliii/cookiesparser/blob/main/LICENSE).
