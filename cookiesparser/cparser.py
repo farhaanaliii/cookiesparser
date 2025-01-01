@@ -1,41 +1,45 @@
 import re
+from . import utils
 
-# Farhan Ali ✨
-# i.farhanali.dev@gmail.com 💌
+# Farhan Ali <i.farhanali.dev@gmail.com>
 
-
-def parse(cookies: str, delimiter: str = ";") -> dict:
-    """ 
-    Parses a cookie string and returns a dictionary of cookies. 
-    If the cookie string is invalid, an empty dictionary is returned. 
-    Just a little magic to make things sweeter! 🍪
+def parse(cookies: str, delimiter: str = ";") -> dict[str, str]:
     """
-    # Doing my magic here to extract key-value pairs! 🎩✨
-    # Trim any leading or trailing delimiters from the cookie string
+    Parses a cookie string and returns a dictionary of cookies.
+    
+    Parameters:
+    cookies (str): The cookie string to parse.
+    delimiter (str): The delimiter separating key-value pairs (default: ';').
+    
+    Returns:
+    dict[str, str]: A dictionary of parsed cookies.
+    """
     cookies = cookies.strip(delimiter)
     matches = re.findall(fr"\s*(.*?)=(.*?){delimiter}\s*", cookies)
     
-    parsed = {}
+    parsed: dict[str, str] = {}
     if not matches:
         return parsed
     
     for match in matches:
         if len(match) == 2:
-            parsed[match[0].strip()] = match[1].strip()
+            parsed[match[0].strip()] = utils.urldecode(match[1].strip())
     
     return parsed
 
 
-def encode(cookies: dict) -> str:
+def encode(cookies: dict[str, str]) -> str:
     """
-    Encodes a dictionary of cookies into a cookie string format. 
-    Returns the final string representation of the cookies. 
-    Let’s turn these cookies into a yummy string! 😋
-    """
-    # Time to turn my cookie dictionary into a cute string! 🥳
-    encoded = []
-
-    for name, value in cookies.items():
-        encoded.append(f"{name}={value}")
+    Encodes a dictionary of cookies into a cookie string format.
     
+    Parameters:
+    cookies (dict[str, str]): The dictionary of cookies to encode.
+    
+    Returns:
+    str: The encoded cookie string.
+    """
+    encoded = [f"{name}={utils.urlencode(value)}" for name, value in cookies.items()]
     return "; ".join(encoded)
+
+def get_cookie(cookie: str, name: str, delimiter: str=";") -> str | None:
+    return parse(cookie, delimiter).get(name)
